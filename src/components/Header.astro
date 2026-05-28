@@ -7,13 +7,25 @@
     <nav class="header__nav">
 
         <a href="https://woodara.online" target="_blank" class="header__logo">
-            Woodara
+            
+            <img 
+                src="/logo_woodara.svg" 
+                alt="Woodara Logo"
+                class="header__logo-image"
+            >
+        
         </a>
   
   
         <a href="#tentang" class="header__pill">
-            <span class="header__flag"></span>
-            Pelajari Lebih Lanjut
+            
+            <img 
+                src="/flag_icon.png" 
+                alt="Indonesia Flag"
+                class="header__flag"
+            >
+            Design contest 2026
+
         </a>
 
     </nav>
@@ -43,35 +55,31 @@
     width: 100%;
   }
 
-  .header__logo {
-    color: #fff;
-    font-size: 1.8rem;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-    text-decoration: none;
-  }
+   .header__logo-image {
+        height: 2rem;
+        width: auto;
+        display: block;
+   }
 
   .header__pill {
     display: inline-flex;
     align-items: center;
     gap: 1rem;                  
     background-color: #ffffff;
-    color: #000000;
-    padding: 1rem 2.2rem;      
+    color: #333;
+    padding: 1rem 1.6rem;      
     border-radius: 10rem;        
     font-size: 1.2rem;          
     font-weight: 500;
     line-height: 1;
+    letter-spacing: 0.2rem;
     text-decoration: none;
+    text-transform: uppercase;
   }
 
-   .header__flag {
-    width: 1.6rem;               /* 16px */
-    height: 1.6rem;              /* 16px */
-    border-radius: 50%; 
-    display: inline-block;
-    background: linear-gradient(to bottom, #FF0000 50%, #FFFFFF 50%);
-    box-shadow: inset 0 0 0 0.1rem rgba(0, 0, 0, 0.15); 
-    flex-shrink: 0;              
-  }
-
+  .header__flag {
+    width: 1.6rem;
+    height: 1.6rem;
+    object-fit: cover;
+    flex-shrink: 0;
+   }
