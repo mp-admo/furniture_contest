@@ -45,11 +45,3 @@
     font-style: normal;
     font-display: swap;
 }
-
-@font-face {
-    font-family: 'Manrope';
-    src: url('public/fonts/manrope-v20-cyrillic_latin-800.woff2') format('woff2');
-    font-weight: 800;
-    font-style: normal;
-    font-display: swap;
-}
