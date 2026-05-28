@@ -90,6 +90,7 @@
 
     .hero__title { 
         color: #111;
+        font-size: clamp(4.2rem, 5vw, 10.4rem);
         margin-bottom: 3.2rem; 
     }
 
@@ -107,4 +108,22 @@
         max-width: 48rem; 
     }
 
+    @media (max-width: 768px) {
+
+        .hero {
+            height: calc(100vh - 6.3rem);
+            align-items: flex-end;
+        }
+
+        .hero::before {
+            background-position: center top;
+        }
+
+        .hero__content {
+            margin-bottom: 4rem;
+            max-width: 100%;
+        }
+    }
+
 </style>
+
