@@ -190,4 +190,67 @@
         width: 100%;
     }
 
+    @media (max-width: 768px) {
+    
+    .rewards {
+        padding: 5rem 0; 
+    }
+
+    .rewards__header {
+        margin-bottom: 3.2rem;
+    }
+
+    .rewards__subtitle {
+        margin-bottom: 2rem;
+    }
+
+    .rewards__title {
+        font-size: 3.2rem;
+        max-width: 100%;
+    }
+
+    
+    .rewards__grid {
+        grid-template-columns: 1fr;
+        border-bottom: none; 
+    }
+
+    
+    .rewards__card {
+        padding: 4rem 2rem; 
+        border-left: none;
+        border-bottom: 0.1rem solid rgba(255, 255, 255, 0.1); 
+    }
+
+    .rewards__card:hover {
+        background-color: transparent; 
+    }
+
+    .rewards__card:hover::before {
+        width: 0;
+    }
+
+    .rewards__card,
+    .rewards__card::before {
+        transition: none !important;
+    }
+
+    .rewards__card:last-child {
+        border-right: none; 
+    }
+
+    .rewards__number {
+        margin-bottom: 2.4rem; 
+    }
+
+    .rewards__card-title {
+        font-size: 2.2rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .rewards__card-text {
+        font-size: 1.4rem; 
+    }
+}
+
 </style>
