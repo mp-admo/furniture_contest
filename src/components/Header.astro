@@ -1,0 +1,77 @@
+---
+
+---
+
+<header class="header">
+
+    <nav class="header__nav">
+
+        <a href="https://woodara.online" target="_blank" class="header__logo">
+            Woodara
+        </a>
+  
+  
+        <a href="#tentang" class="header__pill">
+            <span class="header__flag"></span>
+            Pelajari Lebih Lanjut
+        </a>
+
+    </nav>
+
+</header>
+
+<style>
+  /* Шапка */
+  .header {
+    display: flex;
+    align-items: center; 
+    background-color: #111;
+    height: 6.4rem;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.1); 
+  }
+
+  .header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 140rem;
+    padding: 0 2rem;
+    margin: 0 auto;
+    height: 100%;  
+    width: 100%;
+  }
+
+  .header__logo {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+  }
+
+  .header__pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;                  
+    background-color: #ffffff;
+    color: #000000;
+    padding: 1rem 2.2rem;      
+    border-radius: 10rem;        
+    font-size: 1.2rem;          
+    font-weight: 500;
+    line-height: 1;
+    text-decoration: none;
+  }
+
+   .header__flag {
+    width: 1.6rem;               /* 16px */
+    height: 1.6rem;              /* 16px */
+    border-radius: 50%; 
+    display: inline-block;
+    background: linear-gradient(to bottom, #FF0000 50%, #FFFFFF 50%);
+    box-shadow: inset 0 0 0 0.1rem rgba(0, 0, 0, 0.15); 
+    flex-shrink: 0;              
+  }
+
