@@ -31,7 +31,7 @@
 
             <!-- description -->
             <p class="cta__description">
-                Syarat dan ketentuan lengkap akan segera kami rilis. Ikuti kami, persiapkan karya terbaik Anda, dan ubah takdir desain Anda hari ini.
+                Syarat dan ketentuan lengkap akan segera kami rilis.<br> Ikuti akun Instagram dan TikTok resmi Woodara. Mengikuti kedua akun ini adalah syarat wajib untuk mengikuti kompetisi.
             </p>
 
 
@@ -39,30 +39,38 @@
             <div class="cta__actions">
 
 
-                <!-- main button -->
+                <!-- instagram -->
                 <a 
-                    href="https://www.woodara.online"
+                    href="https://www.instagram.com/woodara.shop/"
                     target="_blank"
                     class="cta__button"
                 >
 
                 <img 
-                    src="/flag_icon.png"
-                    alt="Indonesia Flag"
-                    class="cta__button-flag"
+                    src="/ig_icon.png"
+                    alt=""
+                    class="cta__social-icon"
                 >
 
-                Kunjungi Woodara
+                @woodara.shop
 
                 </a>
 
 
-                <!-- email -->
+                <!-- tik tok -->
                 <a 
                     href="mailto:woodara.shop@gmail.com"
-                    class="cta__email"
+                    class="cta__button"
                 >
-                    woodara.shop@gmail.com
+
+                <img 
+                    src="/tik_tok_icon.png"
+                    alt=""
+                    class="cta__social-icon"
+                >
+
+                @woodara.furniture
+
                 </a>
 
             </div>
@@ -146,6 +154,7 @@
         align-items: center;
         flex-wrap: wrap;
         gap: 1.6rem;
+        line-height: 1;
     }
 
     .cta__button {
@@ -169,34 +178,14 @@
     }
 
 
-    .cta__button-flag {
+    .cta__social-icon {
         width: 1.6rem;
         height: 1.6rem;
         object-fit: cover;
         border-radius: 50%;
     }
 
-    .cta__email {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 1rem 1.6rem;
-        border: 0.1rem solid rgba(255, 255, 255, 0.1);
-        border-radius: 18rem;
-        color: rgba(255, 255, 255, 0.5);
-        text-decoration: none;
-        transition:
-            border-color 0.3s ease,
-            color 0.3s ease,
-            background-color 0.3s ease;
-    }
-
-    .cta__email:hover {
-        border-color: rgba(255, 255, 255, 0.2);
-        color: #FFFFFF;
-        background-color: rgba(255, 255, 255, 0.02);
-    }
-
+    
     @media (max-width: 768px) {
         
         .cta {
