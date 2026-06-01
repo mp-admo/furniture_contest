@@ -16,9 +16,10 @@
 
                 <ul class="showcase__timer">
 
+                    <!-- Дни -->
                     <li class="showcase__time-unit">
 
-                        <span class="showcase__time-value">
+                        <span id="days" class="showcase__time-value">
                             00
                         </span>
 
@@ -28,9 +29,10 @@
 
                     </li>
 
+                    <!-- Часы -->
                     <li class="showcase__time-unit">
 
-                        <span class="showcase__time-value">
+                        <span id="hours" class="showcase__time-value">
                             00
                         </span>
 
@@ -40,9 +42,10 @@
 
                     </li>
 
+                    <!-- Минуты -->
                     <li class="showcase__time-unit">
 
-                        <span class="showcase__time-value">
+                        <span id="minutes" class="showcase__time-value">
                             00
                         </span>
 
@@ -52,9 +55,10 @@
 
                     </li>
 
+                    <!-- Секунды -->
                     <li class="showcase__time-unit">
 
-                        <span class="showcase__time-value">
+                        <span id="seconds" class="showcase__time-value">
                             00
                         </span>
 
@@ -401,7 +405,7 @@
         }
 
         .showcase__time-value {
-            font-size: 3.6rem; 
+            font-size: 3.6rem;
         }
 
         .showcase__time-label {
@@ -440,3 +444,59 @@
     }
     
 </style>
+
+<script>
+
+    const targetDate = new Date('2026-06-15T23:59:59+08:00');
+
+    const daysEl = document.getElementById('days') as HTMLElement;
+    const hoursEl = document.getElementById('hours') as HTMLElement;
+    const minutesEl = document.getElementById('minutes') as HTMLElement;
+    const secondsEl = document.getElementById('seconds') as HTMLElement;
+
+    function updateCountdown(): void {
+
+        const now = new Date();
+        const distance = targetDate.getTime() - now.getTime();
+
+        if (distance <= 0) {
+
+            daysEl.textContent = '00';
+            hoursEl.textContent = '00';
+            minutesEl.textContent = '00';
+            secondsEl.textContent = '00';
+
+            return;
+        }
+
+        const days = Math.floor(
+            distance / (1000 * 60 * 60 * 24)
+        );
+
+        const hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24))
+            / (1000 * 60 * 60)
+        );
+
+        const minutes = Math.floor(
+            (distance % (1000 * 60 * 60))
+            / (1000 * 60)
+        );
+
+        const seconds = Math.floor(
+            (distance % (1000 * 60))
+            / 1000
+        );
+
+        daysEl.textContent = String(days).padStart(2, '0');
+        hoursEl.textContent = String(hours).padStart(2, '0');
+        minutesEl.textContent = String(minutes).padStart(2, '0');
+        secondsEl.textContent = String(seconds).padStart(2, '0');
+
+    }
+
+    updateCountdown();
+
+    setInterval(updateCountdown, 1000);
+
+</script>
