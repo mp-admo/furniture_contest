@@ -226,7 +226,6 @@
 
     .showcase {
         background-color: #111;
-        margin-bottom: 8rem;
     }
 
     .container {
@@ -374,15 +373,15 @@
 
     @media (max-width: 768px) {
 
-        .showcase {
-            margin-bottom: 4rem;
-        }
-
         .showcase__countdown {
             flex-direction: column;
             align-items: flex-start;
             padding: 4rem 0;
             gap: 3rem; 
+        }
+
+        .showcase__countdown {
+            align-items: center;
         }
 
         .showcase__timer {
@@ -412,6 +411,8 @@
 
         .showcase__metrics {
             grid-template-columns: repeat(2, 1fr);
+            margin-left: -2rem;
+            margin-right: -2rem;
         }
 
         .showcase__metric {
