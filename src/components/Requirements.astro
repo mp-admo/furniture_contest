@@ -30,11 +30,11 @@
             <!-- left side -->
             <div class="requirements__visual">
 
-                <img 
-                    src="/requirements_image.png"
-                    alt="Requirements Image"
-                    class="requirements__image"
-                >
+                <model-viewer
+                    src="/wooden_chair.glb"
+                    camera-controls
+                    class="requirements__model">
+                </model-viewer>
 
             </div>
 
@@ -245,14 +245,17 @@
     .requirements__visual {
         position: sticky;
         top: 4rem;
+        aspect-ratio: 1 / 1;
+        background: #f2f1ee;
+        background-image:
+        linear-gradient(rgba(0,0,0,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,.04) 1px, transparent 1px);
+        background-size: 4rem 4rem;
     }
 
-    .requirements__image {
+    .requirements__model {
         width: 100%;
-        aspect-ratio: 1 / 1;
-        height: auto;
-        object-fit: cover;
-        display: block;
+        height: 100%;
     }
 
     .requirements__accordion {
@@ -263,7 +266,11 @@
     .requirements__item {
         position: relative;
         padding: 5rem 0 3.4rem;
-        border-bottom: 1px solid rgba(255,255,255,0.08);
+        border-bottom: 1px solid rgba(90, 90, 90, 0.2);
+    }
+
+  .requirements__item:first-child {
+        padding-top: 0;
     }
 
     .requirements__wrapper {
@@ -341,12 +348,6 @@
             width: 100%;
         }
 
-        .requirements__image {
-            height: 28rem; 
-            width: 100%;
-            object-fit: cover;
-        }
-
         .requirements__accordion {
             border-top: 1px solid rgba(255, 255, 255, 0.1); 
         }
@@ -397,4 +398,9 @@
 
     });
 
+</script>
+
+<script
+    type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
 </script>
